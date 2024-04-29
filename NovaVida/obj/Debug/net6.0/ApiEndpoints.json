@@ -1,0 +1,193 @@
+[
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "AtualizaAluno",
+    "RelativePath": "api/Alunos/AtualizaAluno",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAluno",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "aluno",
+        "Type": "NovaVidaDomain.Models.Aluno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "BuscaAlunoId",
+    "RelativePath": "api/Alunos/BuscaID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAluno",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "DeletaAluno",
+    "RelativePath": "api/Alunos/DeletaAluno",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAluno",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "InseriAluno",
+    "RelativePath": "api/Alunos/InseriAluno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aluno",
+        "Type": "NovaVidaDomain.Models.Aluno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "InseriListaAlunos",
+    "RelativePath": "api/Alunos/InseriListaAlunos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunos",
+        "Type": "System.Collections.Generic.List\u00601[[NovaVidaDomain.Models.Aluno, NovaVidaDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.AlunosController",
+    "Method": "ListaAlunos",
+    "RelativePath": "api/Alunos/ListaAlunos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProf",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "AtualizaProf",
+    "RelativePath": "api/Professores/AtualizaProf",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "professor",
+        "Type": "NovaVidaDomain.Models.Professor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "BuscaProfId",
+    "RelativePath": "api/Professores/BuscaID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProf",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "DeletaProf",
+    "RelativePath": "api/Professores/DeletaProf",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProf",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "InseriProf",
+    "RelativePath": "api/Professores/InseriProf",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prof",
+        "Type": "NovaVidaDomain.Models.Professor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "InseriListaProfs",
+    "RelativePath": "api/Professores/InseriProfLista",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Profs",
+        "Type": "System.Collections.Generic.List\u00601[[NovaVidaDomain.Models.Professor, NovaVidaDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NovaVida.Controllers.ProfessoresController",
+    "Method": "ListaProfs",
+    "RelativePath": "api/Professores/ListaProfs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
