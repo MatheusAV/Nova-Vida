@@ -1,0 +1,59 @@
+<mat-card>
+  <h1>{{ btnTitulo }}</h1>
+
+  <form [formGroup]="professorForm" (ngSubmit)="submit()" #formDit="ngForm">
+    <input type="hidden" formControlName="professorId" />
+
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Nome:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="nome"
+          placeholder="Insira o nome!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Departamento:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="departamento"
+          placeholder="Insira seu departamento!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Materia:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="materia"
+          placeholder="Insira sua materia!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="btn-box">
+      <button
+        type="submit"
+        [disabled]="!professorForm.valid"
+        mat-raised-button
+        color="accent"
+      >
+        {{ btnAcao }}
+      </button>
+      <button routerLink="" mat-raised-button>Voltar</button>
+    </div>
+  </form>
+</mat-card>

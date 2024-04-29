@@ -1,0 +1,14 @@
+mat-card {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 3rem;
+}
+
+button {
+  padding: 0.5rem 1rem; 
+}

@@ -1,0 +1,11 @@
+.btn-voltar{
+
+  margin-top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-voltar button {
+  width: 50%;
+}

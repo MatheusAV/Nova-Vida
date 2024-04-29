@@ -1,0 +1,8 @@
+<div *ngIf="prof">
+  <app-professor-form
+    [btnAcao]="btnAcao"
+    [btnTitulo]="btnTitulo"
+    [dadosProfessor]="prof" (onSubmit)="editarProfessor($event)">
+</app-professor-form>
+</div>
+
