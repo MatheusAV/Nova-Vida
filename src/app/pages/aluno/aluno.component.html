@@ -1,0 +1,56 @@
+<mat-card>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+   
+      <ng-container matColumnDef="Id aluno">
+        <th mat-header-cell *matHeaderCellDef>Registro aluno.</th>
+        <td mat-cell *matCellDef="let aluno">{{ aluno.alunoId }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let aluno">{{ aluno.nome }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Valor mensalidade">
+        <th mat-header-cell *matHeaderCellDef>Valor mensalidade</th>
+        <td mat-cell *matCellDef="let aluno">
+          {{ aluno.valorMensalidade | currency : "BRL" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Data vencimento">
+        <th mat-header-cell *matHeaderCellDef>Data vencimento</th>
+        <td mat-cell *matCellDef="let aluno">{{ aluno.dataVencimento }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Id professor">
+        <th mat-header-cell *matHeaderCellDef>Registro professor</th>
+        <td mat-cell *matCellDef="let aluno">{{ aluno.idProfessor }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Exluir">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let aluno">
+          <button mat-raised-button color="warn" (click)="openDialog(aluno.alunoId)">Excluir</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+      <tr mat-row *matRowDef="let row; columns: colunas"></tr>
+    </table>    
+
+    <div class="paginator-container">
+      <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="[5, 10, 20]">
+      </mat-paginator>
+    </div>
+
+  <div class="btn-voltar">
+    <button routerLink="" mat-raised-button>Voltar</button>
+  </div>
+  <ng-template #noAlunos>
+    <p>Professor sem aluno cadastrado</p>
+  </ng-template>
+</mat-card>

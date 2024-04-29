@@ -1,0 +1,13 @@
+<mat-card>
+  <div *ngIf="result">
+    <h1>Deseja confirmar a exclusão?</h1>
+    <div>
+      <p *ngIf="result.nome" style="font-weight: bold">DO(A): {{ result.nome }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 10px;">
+      <button mat-raised-button color="warn" (click)="Excluir(result)">Confirmar</button>
+      <button mat-raised-button (click)="Cancelar()">Voltar</button>
+    </div>
+  </div>
+</mat-card>

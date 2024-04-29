@@ -1,0 +1,86 @@
+<mat-card>
+  <div class="professor-box">
+    <button routerLink="/cadastro" mat-raised-button color="primary">
+      Cadastrar professor
+    </button>
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Procurar</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Qual professor está buscando?"
+          (input)="search($event)"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Id professor">
+      <th mat-header-cell *matHeaderCellDef>Registro</th>
+      <td mat-cell *matCellDef="let professor">{{ professor.professorId }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let professor">{{ professor.nome }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Data contratação">
+      <th mat-header-cell *matHeaderCellDef>Data contratação</th>
+      <td mat-cell *matCellDef="let professor">
+        {{ professor.dataContratacao }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Departamento">
+      <th mat-header-cell *matHeaderCellDef>Departamento</th>
+      <td mat-cell *matCellDef="let professor">{{ professor.departamento }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Materia">
+      <th mat-header-cell *matHeaderCellDef>Materia</th>
+      <td mat-cell *matCellDef="let professor">{{ professor.materia }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Acoes">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let professor">
+        <button
+          routerLink="/editar/{{ professor.professorId }}"
+          style="margin-right: 10px"
+          mat-raised-button
+          color="accent"
+        >
+          Editar
+        </button>
+        <button
+          routerLink="/detalhes/{{ professor.professorId }}"
+          style="margin-right: 10px"
+          mat-raised-button
+        >
+          Alunos
+        </button>
+        <button mat-raised-button color="warn" (click)="openDialog(professor.professorId)">Excluir</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Exluir">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let professor"></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunas"></tr>
+  </table>
+
+  <div class="paginator-container">
+    <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 20]">
+    </mat-paginator>
+  </div>
+  
+</mat-card>
